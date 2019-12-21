@@ -1,4 +1,4 @@
-#include "insertion_ordered_map.h"
+#include "dupa.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -334,5 +334,7 @@ int main() {
     }
     // sprawdzam czy jest konstruktor bezparametrowy i kopiujący
     insertion_ordered_map<int,int> it, it2(it); 
+    assert(it.empty());
+    assert(it2.empty());
     cout << "Accepted\n";
 }
