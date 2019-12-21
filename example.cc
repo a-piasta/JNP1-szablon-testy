@@ -96,12 +96,14 @@ int main() {
     ile = 1;
     message = "Ta wiadomość nie powinna zostać wypisana (nawet jeżeli potem wypisze Accepted to masz źle)";
     insertion_ordered_map<Key, int, Hash> m2(m1); // nic nie powinno sie wypisać
+    ile=0;
     try {
         auto &ref = m1.at(Key(1));
         cout << "miałeś wyjątek rzucić\n";
     } catch (lookup_error &e) {
         cout << "ok wyjątek\n";
     }
+    ile=1;
     insertion_ordered_map<Key, int, Hash> m3 = m1; // dalej nic nie powinno się wypisać
     message = "kopiuję się (ok)";
     rzucaj = true;
