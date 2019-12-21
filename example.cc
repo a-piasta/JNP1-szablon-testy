@@ -202,6 +202,7 @@ int main() {
             check3(fajna, order);
         }
     }
+    wypisuj=true; ile=0;
     fajna2 = fajna;
     for (int i = 0; i < 50; i++) {
         try {
@@ -227,6 +228,7 @@ int main() {
             throw;
         }
     }
+    wypisuj=true; ile=0;
     fajna2 = fajna;
     for (int i = 0; i < 50; i++) {
         try {
@@ -256,6 +258,7 @@ int main() {
             throw;
         }
     }
+    wypisuj=true; ile=0;
     fajna2 = fajna;
     for (int i = 0; i < 50; i++) {
         try {
@@ -277,6 +280,7 @@ int main() {
             throw;
         }
     }
+    wypisuj=true;ile=0;
     fajna2=fajna;
     for (int i = 0; i < 50; i++) {
         try {
@@ -308,6 +312,7 @@ int main() {
             throw;
         }
     }
+    wypisuj=true; ile=0;
     fajna2=fajna;
     srand(2137);
     for (int i = 0; i < 50; i++) {
