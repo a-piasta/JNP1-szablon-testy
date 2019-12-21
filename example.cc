@@ -142,8 +142,8 @@ int main() {
     insertion_ordered_map<Key, int, Hash> c = std::move(m1);
     size_t s = m1.size(); // Peczar mówił że jak jest segfault to jest źle
     assert(m1.begin() == m1.begin() && m1.end() == m1.end());
-    m1.clear();
     rzucaj = false;
+    m1.clear();
     for (int i = 5; i > 0; i--) m1.insert(Key(i),i+2);
     int dd=5;
     for (insertion_ordered_map<Key, int, Hash>::iterator it = m1.begin(); it != m1.end(); ++it, dd--) {
