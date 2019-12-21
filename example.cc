@@ -94,8 +94,7 @@ int main() {
     insertion_ordered_map<Key, int, Hash> m1;
     m1.insert(Key{2},3);
     ile = 1;
-    message = "Ta wiadomość nie powinna zostać wypisana (nawet jeżeli potem wypisze "
-    +"Accepted to masz źle)";
+    message = "Ta wiadomość nie powinna zostać wypisana (nawet jeżeli potem wypisze Accepted to masz źle)";
     insertion_ordered_map<Key, int, Hash> m2(m1); // nic nie powinno sie wypisać
     try {
         auto &ref = m1.at(Key(1));
