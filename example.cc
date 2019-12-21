@@ -193,7 +193,7 @@ int main() {
             wypisuj=false;
             ile=i;
             fajna.insert(k,v);
-            fajna = fajna2;
+            fajna = std::move(fajna2);
             break;
         } catch (XD &e) {
             wypisuj=true; ile=0;
@@ -202,6 +202,7 @@ int main() {
             check3(fajna, order);
         }
     }
+    fajna2 = fajna;
     for (int i = 0; i < 50; i++) {
         try {
             wypisuj=true;
@@ -210,7 +211,7 @@ int main() {
             wypisuj=false;
             ile=i;
             fajna.erase(k);
-            fajna = fajna2;
+            fajna = std::move(fajna2);
             break;
         } catch (XD &e) {
             wypisuj=true; ile=0;
@@ -226,6 +227,7 @@ int main() {
             throw;
         }
     }
+    fajna2 = fajna;
     for (int i = 0; i < 50; i++) {
         try {
             wypisuj=true;
@@ -238,7 +240,7 @@ int main() {
             wypisuj=true;
             ref.v++;
             assert(fajna.at(k) != fajna2.at(k));
-            fajna = fajna2;
+            fajna = std::move(fajna2);
             break;
         } catch (XD &e) {
             wypisuj=true; ile=0;
@@ -254,6 +256,7 @@ int main() {
             throw;
         }
     }
+    fajna2 = fajna;
     for (int i = 0; i < 50; i++) {
         try {
             wypisuj=true;
@@ -262,7 +265,7 @@ int main() {
             wypisuj=false;
             ile=i;
             const auto &ref = fajna.at(k);
-            fajna = fajna2;
+            fajna = std::move(fajna2);
             break;
         } catch (XD &e) {
         } catch (lookup_error &e) {
@@ -274,6 +277,7 @@ int main() {
             throw;
         }
     }
+    fajna2=fajna;
     for (int i = 0; i < 50; i++) {
         try {
             wypisuj=true;
@@ -286,7 +290,7 @@ int main() {
             wypisuj=true;
             ref.v++;
             assert(fajna.at(k) != fajna2.at(k));
-            fajna = fajna2;
+            fajna = std::move(fajna2);
             break;
         } catch (XD &e) {
             wypisuj=true; ile=0;
@@ -304,6 +308,7 @@ int main() {
             throw;
         }
     }
+    fajna2=fajna;
     srand(2137);
     for (int i = 0; i < 50; i++) {
         try {
@@ -314,7 +319,7 @@ int main() {
             wypisuj=false;
             ile=i;
             fajna.merge(map2);
-            fajna = fajna2;
+            fajna = std::move(fajna2);
             break;
         } catch (XD &e) {
             wypisuj=true; ile=0;
@@ -322,7 +327,7 @@ int main() {
             check2(fajna2, v1, v1);
             check3(fajna, order);
         } catch (lookup_error &e) {
-            fajna = fajna2;
+            fajna = std::move(fajna2);
             break;
         } catch (exception &e) {
             cout << "chyba coś nie tak" << endl;
